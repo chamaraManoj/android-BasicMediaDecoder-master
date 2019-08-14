@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "H:\\My_Codes\\AndroidNew\\android-BasicMediaDecoder-master\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
+            "outputFile": "E:\\SelfLearning\\Android\\android-BasicMediaDecoder-master\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\chama\\.gradle\\caches\\transforms-2\\files-2.1\\cc4f5801caf22a32a1aa4cfa2be7a59f\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\ckat9988\\.gradle\\caches\\transforms-2\\files-2.1\\23c1a6c8403a8cd302acd3a08a71aa92\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

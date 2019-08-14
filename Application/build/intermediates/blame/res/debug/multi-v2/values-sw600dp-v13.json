@@ -1,27 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "H:\\My_Codes\\AndroidNew\\android-BasicMediaDecoder-master\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "E:\\SelfLearning\\Android\\android-BasicMediaDecoder-master\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "H:\\My_Codes\\AndroidNew\\android-BasicMediaDecoder-master\\Application\\src\\main\\res\\values-sw600dp\\template-dimens.xml",
+                    "source": "E:\\SelfLearning\\Android\\android-BasicMediaDecoder-master\\Application\\src\\main\\res\\values-sw600dp\\template-styles.xml",
                     "from": {
-                        "startLines": "20,21",
-                        "startColumns": "4,4",
-                        "startOffsets": "656,724",
-                        "endColumns": "67,67",
-                        "endOffsets": "719,787"
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "639",
+                        "endLines": "22",
+                        "endColumns": "12",
+                        "endOffsets": "883"
                     },
                     "to": {
-                        "startLines": "10,11",
-                        "startColumns": "4,4",
-                        "startOffsets": "611,679",
-                        "endColumns": "67,67",
-                        "endOffsets": "674,742"
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "747",
+                        "endLines": "16",
+                        "endColumns": "12",
+                        "endOffsets": "987"
                     }
                 },
                 {
-                    "source": "C:\\Users\\chama\\.gradle\\caches\\transforms-2\\files-2.1\\cc4f5801caf22a32a1aa4cfa2be7a59f\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\ckat9988\\.gradle\\caches\\transforms-2\\files-2.1\\23c1a6c8403a8cd302acd3a08a71aa92\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -31,22 +33,20 @@
                     }
                 },
                 {
-                    "source": "H:\\My_Codes\\AndroidNew\\android-BasicMediaDecoder-master\\Application\\src\\main\\res\\values-sw600dp\\template-styles.xml",
+                    "source": "E:\\SelfLearning\\Android\\android-BasicMediaDecoder-master\\Application\\src\\main\\res\\values-sw600dp\\template-dimens.xml",
                     "from": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "621",
-                        "endLines": "22",
-                        "endColumns": "12",
-                        "endOffsets": "861"
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "676,745",
+                        "endColumns": "67,67",
+                        "endOffsets": "739,808"
                     },
                     "to": {
-                        "startLines": "12",
-                        "startColumns": "4",
-                        "startOffsets": "747",
-                        "endLines": "16",
-                        "endColumns": "12",
-                        "endOffsets": "987"
+                        "startLines": "10,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "611,679",
+                        "endColumns": "67,67",
+                        "endOffsets": "674,742"
                     }
                 }
             ]

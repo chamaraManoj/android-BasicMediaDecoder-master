@@ -1,4 +1,4 @@
-#Tue Aug 13 21:42:59 AEST 2019
-base.0=H\:\\My_Codes\\AndroidNew\\android-BasicMediaDecoder-master\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+#Wed Aug 14 10:10:19 AEST 2019
+base.0=E\:\\SelfLearning\\Android\\android-BasicMediaDecoder-master\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.0=classes.dex
 renamed.0=classes.dex

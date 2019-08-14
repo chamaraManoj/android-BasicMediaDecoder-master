@@ -134,8 +134,7 @@ public class MediaCodecWrapper {
      * @param surface Surface to render the decoded frames.
      * @return
      */
-    public static MediaCodecWrapper fromVideoFormat(final MediaFormat trackFormat,
-            Surface surface) throws IOException {
+    public static MediaCodecWrapper fromVideoFormat(final MediaFormat trackFormat, Surface surface) throws IOException {
         MediaCodecWrapper result = null;
         MediaCodec videoCodec = null;
 
@@ -238,9 +237,12 @@ public class MediaCodecWrapper {
      * @throws MediaCodec.CryptoException
      */
     public boolean writeSample(final MediaExtractor extractor,
-            final boolean isSecure,
-            final long presentationTimeUs,
-            int flags) {
+                                final boolean isSecure,
+                                final long presentationTimeUs,
+                                int flags,
+                                ByteBuffer dataBuffer,
+                                int dataSize,
+                                int frameCounter) {
         boolean result = false;
 
         if (!mAvailableInputBuffers.isEmpty()) {
@@ -248,29 +250,41 @@ public class MediaCodecWrapper {
             ByteBuffer buffer = mInputBuffers[index];
 
             // reads the sample from the file using extractor into the buffer
-            int size = extractor.readSampleData(buffer, 0);
-            //Log.d("dddd","A");
-            //byte[] array = buffer.get();
-            //Log.d("dddd","B");
-            for(int i = 0; i<size;i++)
+
+            //int size = extractor.readSampleData(buffer, 0);
+
+           /* Log.d("bbbb","Sizee             "+String.valueOf(dataSize));
+            for(int i = 0; i<dataSize;i++)
+                Log.d("bbbb",String.valueOf(dataBuffer.get()));*/
+            if(frameCounter<7) {
+                byte[] tempArray = new byte[dataSize];
+
+                dataBuffer.get(tempArray, 0, dataSize);
+                buffer.put(tempArray);
+            }
+            /*for(int i = 0; i<dataSize;i++)
                 Log.d("dddd",String.valueOf(buffer.get()));
             Log.d("dddd",String.valueOf(presentationTimeUs));
-            Log.d("dddd",String.valueOf(size));
+            Log.d("dddd",String.valueOf(dataSize));
             Log.d("dddd",String.valueOf(flags));
             Log.d("dddd","aaaaaaaaaaaaaaaaaa");
-            Log.d("dddd","aaaaaaaaaaaaaaaaaa");
-            if (size <= 0) {
+            Log.d("dddd","aaaaaaaaaaaaaaaaaa");*/
+
+            //Log.d("bbbb","frame Counter "+String.valueOf(frameCounter));
+            if (frameCounter >=8) {
                 flags |= MediaCodec.BUFFER_FLAG_END_OF_STREAM;
             }
 
             // Submit the buffer to the codec for decoding. The presentationTimeUs
             // indicates the position (play time) for the current sample.
             if (!isSecure) {
-                mDecoder.queueInputBuffer(index, 0, size, presentationTimeUs, flags);
-            } else {
+
+                mDecoder.queueInputBuffer(index, 0, dataSize, presentationTimeUs, flags);
+            }
+            /*else {
                 extractor.getSampleCryptoInfo(sCryptoInfo);
                 mDecoder.queueSecureInputBuffer(index, 0, sCryptoInfo, presentationTimeUs, flags);
-            }
+            }*/
 
             result = true;
         }
